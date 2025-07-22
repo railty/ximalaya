@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Ximalaya",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.ximalaya.com/*"],
+      "js": ["assets/ximalaya_cs.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "config page"
+  }
+}
