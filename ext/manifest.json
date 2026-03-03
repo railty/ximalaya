@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Ximalaya Downloader",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "homepage_url": "https://github.com/railty/ximalaya",
   "description": "一款强大的喜马拉雅音频下载器，支持自动化页面导航和重复文件检测。可以让您批量下载您购买的音频。",
   "icons": {
     "16": "icons/icon16.png",
