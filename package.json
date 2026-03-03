@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "if exist dist rmdir /s /q dist",
     "build-cs": "vite build -c vite.content.script.config.js",
     "build-tab": "vite build -c vite.config.js",
-    "build": "npm run build-cs && npm run build-tab && copy ext\\* dist\\"
+    "build": "npm run clean && npm run build-cs && npm run build-tab && xcopy /e /i ext\\icons dist\\icons && copy ext\\manifest.json dist\\ && copy ext\\background.js dist\\"
   },
   "dependencies": {
     "crypto-js": "^4.2.0",

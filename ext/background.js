@@ -7,5 +7,5 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 chrome.action.onClicked.addListener(() => {
-  chrome.tabs.create({ url: chrome.runtime.getURL("./ximalaya.html") });
+  chrome.tabs.create({ url: chrome.runtime.getURL("./index.html") });
 });

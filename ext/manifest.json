@@ -1,12 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "Ximalaya",
-  "version": "1.0",
+  "name": "Ximalaya Downloader",
+  "version": "1.0.1",
+  "description": "一款强大的喜马拉雅音频下载器，支持自动化页面导航和重复文件检测。可以让您批量下载您购买的音频。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "permissions": [
-    "storage",
-    "activeTab",
-    "tabs",
-    "scripting"
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://*.ximalaya.com/*",
+    "https://*.xmcdn.com/*"
   ],
   "background": {
     "service_worker": "background.js",
@@ -14,12 +21,21 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.ximalaya.com/*"],
-      "js": ["assets/ximalaya_cs.js"],
+      "matches": [
+        "https://www.ximalaya.com/*"
+      ],
+      "js": [
+        "assets/ximalaya_cs.js"
+      ],
       "run_at": "document_idle"
     }
   ],
   "action": {
-    "default_title": "config page"
+    "default_title": "Ximalaya Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
 }
